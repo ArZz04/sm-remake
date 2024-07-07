@@ -1,15 +1,16 @@
 from pydantic import BaseModel
 from typing import Optional
-from datetime import date
+from datetime import datetime
 
 class Product(BaseModel):
     id: int
     name: str
     price: float
     family_id: int
+    category_id : int
     format: str
     dots: int
-    last_changed: str
+    last_changed: Optional[datetime] 
     active: int
 
     class Config:

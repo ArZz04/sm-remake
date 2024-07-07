@@ -6,6 +6,7 @@ from datetime import datetime as date
 
 from models.product import Product as ProductModel
 from models.family import Family as FamilyModel
+from models.category import Category as CategoryModel
 from models.product import ProductUpdate as ProductUpdateModel
 
 router = APIRouter(prefix="/products",
@@ -25,14 +26,31 @@ async def get_productos():
     except NoResultFound as e: 
         raise HTTPException(status_code=500, detail=f"Error de base de datos: {str(e)}")
     
-@router.get('/family/{family_id}', response_model=list[FamilyModel])
-async def get_family_filtered(family_id: int):
+@router.get('/family/{family_id}', response_model=list[ProductModel])
+async def get_product_filtered_by_family(family_id: int):
     try:
 
         result = session.query(Product).filter(Product.family_id == family_id).all()
 
         if not result:
-            raise HTTPException(status_code=404, detail="Producto no encontrado")
+            raise HTTPException(status_code=404, detail="Familia no encontrada")
+
+        for family in result:
+            if family.last_changed:
+                family.last_changed = date.strptime(family.last_changed, "%Y-%m-%d %H:%M:%S")
+                
+        return result
+    except NoResultFound as e:
+        raise HTTPException(status_code=500, detail=f"Error de base de datos: {str(e)}")
+    
+@router.get('/category/{category_id}', response_model=list[ProductModel])
+async def get_family_filtered(category_id: str):
+    try:
+
+        result = session.query(Product).filter(Product.category_id == category_id).all()
+
+        if not result:
+            raise HTTPException(status_code=404, detail="Categoria no encontrada")
 
         return result
     except NoResultFound as e:
