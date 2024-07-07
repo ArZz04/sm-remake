@@ -2,7 +2,18 @@ import { getFamilies, getProductsByCategory, getProductById } from './api.js';
 
 const selectFamily = document.getElementById('select-family');
 const selectProduct = document.getElementById('select-product');
+const inputDots = document.getElementById('input-dots');
 const inputPrice = document.getElementById('input-price');
+
+function toggleInputFields(enable) {
+    inputDots.disabled = !enable;
+    inputPrice.disabled = !enable;
+}
+
+function clearInputFields() {
+    inputDots.value = '';
+    inputPrice.value = '';
+}
 
 getFamilies()
     .then(data => {
@@ -17,8 +28,6 @@ getFamilies()
             }
         }
     });
-
-
 
 // Función para manejar cambios en selectFamily
 function handleSelectFamilyChange() {
@@ -42,11 +51,14 @@ function handleSelectFamilyChange() {
             })
             .catch(error => {
                 console.error('Error al obtener productos:', error);
+                clearInputFields(); // Limpiamos los campos si hay un error
+                toggleInputFields(false); // Deshabilitamos los campos si hay un error
             });
     } else {
         // Si no hay ninguna opción seleccionada o es '0', mostramos el mensaje por defecto
         selectProduct.innerHTML = '<option value="0">Seleccionar Producto</option>';
-        inputPrice.value = ''; // Limpiamos el valor de inputPrice
+        clearInputFields(); // Limpiamos los campos
+        toggleInputFields(false); // Deshabilitamos los campos
     }
 }
 
@@ -58,17 +70,22 @@ function handleSelectProductChange() {
         getProductById(selectedProductId)
             .then(selectedProduct => {
                 if (selectedProduct) {
+                    inputDots.value = selectedProduct.dots; // Actualizamos inputDots con los puntos del producto seleccionado
                     inputPrice.value = selectedProduct.price; // Actualizamos inputPrice con el precio del producto seleccionado
+                    toggleInputFields(true); // Habilitamos los campos
                 } else {
-                    inputPrice.value = ''; // Limpiamos el valor de inputPrice si no se encuentra el producto
+                    clearInputFields(); // Limpiamos los campos si no se encuentra el producto
+                    toggleInputFields(false); // Deshabilitamos los campos
                 }
             })
             .catch(error => {
                 console.error('Error al obtener el producto por ID:', error);
-                inputPrice.value = ''; // Limpiamos el valor de inputPrice en caso de error
+                clearInputFields(); // Limpiamos los campos en caso de error
+                toggleInputFields(false); // Deshabilitamos los campos en caso de error
             });
     } else {
-        inputPrice.value = ''; // Limpiamos el valor de inputPrice si se selecciona 'Seleccionar Producto'
+        clearInputFields(); // Limpiamos los campos si se selecciona 'Seleccionar Producto'
+        toggleInputFields(false); // Deshabilitamos los campos
     }
 }
 
