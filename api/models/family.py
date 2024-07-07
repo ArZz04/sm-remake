@@ -1,11 +1,12 @@
 from pydantic import BaseModel
 from typing import Optional
-from datetime import date
+from datetime import datetime
 
 class Family(BaseModel):
     id: int
     name: str
-    last_changed: Optional[date]  
+    category_id : int
+    last_changed: Optional[datetime]  
     
     class Config:
         orm_mode = True

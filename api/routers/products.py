@@ -5,8 +5,6 @@ from sqlalchemy.orm.exc import NoResultFound
 from datetime import datetime as date
 
 from models.product import Product as ProductModel
-from models.family import Family as FamilyModel
-from models.category import Category as CategoryModel
 from models.product import ProductUpdate as ProductUpdateModel
 
 router = APIRouter(prefix="/products",
@@ -44,13 +42,25 @@ async def get_product_filtered_by_family(family_id: int):
         raise HTTPException(status_code=500, detail=f"Error de base de datos: {str(e)}")
     
 @router.get('/category/{category_id}', response_model=list[ProductModel])
-async def get_family_filtered(category_id: str):
+async def get_product_filtered_by_category(category_id: int):
     try:
 
         result = session.query(Product).filter(Product.category_id == category_id).all()
 
         if not result:
             raise HTTPException(status_code=404, detail="Categoria no encontrada")
+
+        return result
+    except NoResultFound as e:
+        raise HTTPException(status_code=500, detail=f"Error de base de datos: {str(e)}")
+
+@router.get('/byid/{product_id}', response_model=ProductModel)
+async def get_product_by_id(product_id: int):
+    try:
+        result = session.query(Product).filter(Product.id == product_id).one()
+
+        if not result:
+            raise HTTPException(status_code=404, detail="Producto no encontrado")
 
         return result
     except NoResultFound as e:
@@ -67,6 +77,16 @@ async def search_product_filtered(product_name: str):
 
         return results 
     except NoResultFound as e:
+        raise HTTPException(status_code=500, detail=f"Error de base de datos: {str(e)}")
+
+@router.get('/recent', response_model=list[ProductModel])
+async def get_recent_products():
+    try:
+        # Ejemplo de consulta
+        result = session.query(Product).order_by(Product.last_changed.desc()).limit(5).all()
+
+        return result
+    except NoResultFound as e: 
         raise HTTPException(status_code=500, detail=f"Error de base de datos: {str(e)}")
 
 # -----------------------------------| POSTS |--------------------------------------------

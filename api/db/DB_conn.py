@@ -34,27 +34,29 @@ class Family(Base):
     __tablename__ = 'families'
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
+    category_id = Column(Integer, ForeignKey('categories.id'))
     last_changed = Column(String)
 
-    def __init__(self, id, name, last_changed):
+    def __init__(self, id, name, category_id, last_changed):
         self.id = id
         self.name = name
+        self.category_id = category_id
         self.last_changed = last_changed
             
     def __repr__(self):
-        return "<Family('%s', '%s')>" % (self.name, self.last_changed)
+        return "<Family('%s', '%s, '%s')>" % (self.name, self.category_id, self.last_changed)
     
 class Category(Base): 
     __tablename__ = 'categories'
     id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String)
+    category = Column(String)
 
-    def __init__(self, id, name):
+    def __init__(self, id, category):
         self.id = id
-        self.name = name
+        self.category = category
             
     def __repr__(self):
-        return "<Category('%s', '%s')>" % (self.name)
+        return "<Category('%s')>" % (self.category)
 
 
 engine = create_engine("sqlite:///db/obrador_sm.db", echo=True, )
