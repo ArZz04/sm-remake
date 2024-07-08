@@ -1,4 +1,4 @@
-import { getFamilies, getProductsByCategory, getProductById } from './api.js';
+import { getFamilies, getProductsByCategory, getProductById, updateProductapi } from './api.js';
 
 const selectFamily = document.getElementById('select-family');
 const selectProduct = document.getElementById('select-product');
@@ -89,11 +89,36 @@ function handleSelectProductChange() {
     }
 }
 
+function handleUpdateProduct() {
+    const selectedProductId = selectProduct.value;
+    const updatedProductData = {
+        name: document.getElementById('select-product').options[document.getElementById('select-product').selectedIndex].text,
+        price: parseFloat(document.getElementById('input-price').value),
+        format: 'kg',
+        dots: parseInt(document.getElementById('input-dots').value)
+    };
+
+    console.log('Datos actualizados:', updatedProductData);
+
+    updateProduct(selectedProductId, updatedProductData)
+        .then(updatedProduct => {
+            console.log('Producto actualizado:', updatedProduct);
+            // Aquí puedes actualizar selectProduct con los datos actualizados si es necesario
+            handleSelectProductChange();
+        })
+        .catch(error => {
+            console.error('Error al actualizar el producto:', error);
+        });
+}
 // Agregar listener de evento 'change' a selectFamily
 selectFamily.addEventListener('change', handleSelectFamilyChange);
 
 // Agregar listener de evento 'change' a selectProduct
 selectProduct.addEventListener('change', handleSelectProductChange);
+
+// Escucha el evento 'click' en el botón de ACTUALIZAR y llama a handleUpdateProduct
+const updateButton = document.getElementById('update-button');
+updateButton.addEventListener('click', handleUpdateProduct);
 
 // Llamamos a handleSelectFamilyChange inicialmente para cargar productos cuando se carga la página o cambia selectFamily inicialmente
 handleSelectFamilyChange();

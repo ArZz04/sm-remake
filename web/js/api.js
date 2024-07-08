@@ -118,3 +118,26 @@ export async function getLatestProducts() {
     });
 }
 
+async function updateProduct(productId, updatedProductData) {
+    const url = `${API_URL}/api/products/update/${productId}`;
+
+    try {
+        const response = await fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedProductData)
+        });
+
+        if (!response.ok) {
+            throw new Error('Error al actualizar el producto');
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error al conectar con la API:', error);
+        throw error; // Propaga el error para que se maneje donde se llame a la función
+    }
+}
