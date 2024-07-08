@@ -16,7 +16,6 @@ async def get_families():
     try:
         
         result = session.query(Category).all()
-        print(result)
         
         return result
     except NoResultFound as e:

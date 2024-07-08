@@ -1,9 +1,14 @@
 import { getFamilies, getProductsByCategory, getProductById, updateProductapi } from './api.js';
+import { openModal, cancelModal } from './modal.js';
 
 const selectFamily = document.getElementById('select-family');
 const selectProduct = document.getElementById('select-product');
 const inputDots = document.getElementById('input-dots');
 const inputPrice = document.getElementById('input-price');
+const confirmModalButton = document.getElementById('confirm-modal');
+const updateButton = document.getElementById('update-button');
+const cancelModalButton = document.getElementById('cancel-modal');
+
 
 function toggleInputFields(enable) {
     inputDots.disabled = !enable;
@@ -89,8 +94,9 @@ function handleSelectProductChange() {
     }
 }
 
-function handleUpdateProduct() {
+function confirmModal() {
     const selectedProductId = selectProduct.value;
+
     const updatedProductData = {
         name: document.getElementById('select-product').options[document.getElementById('select-product').selectedIndex].text,
         price: parseFloat(document.getElementById('input-price').value),
@@ -98,9 +104,7 @@ function handleUpdateProduct() {
         dots: parseInt(document.getElementById('input-dots').value)
     };
 
-    console.log('Datos actualizados:', updatedProductData);
-
-    updateProduct(selectedProductId, updatedProductData)
+    updateProductapi(selectedProductId, updatedProductData)
         .then(updatedProduct => {
             console.log('Producto actualizado:', updatedProduct);
             // Aquí puedes actualizar selectProduct con los datos actualizados si es necesario
@@ -110,15 +114,19 @@ function handleUpdateProduct() {
             console.error('Error al actualizar el producto:', error);
         });
 }
+
 // Agregar listener de evento 'change' a selectFamily
 selectFamily.addEventListener('change', handleSelectFamilyChange);
 
 // Agregar listener de evento 'change' a selectProduct
 selectProduct.addEventListener('change', handleSelectProductChange);
 
-// Escucha el evento 'click' en el botón de ACTUALIZAR y llama a handleUpdateProduct
-const updateButton = document.getElementById('update-button');
-updateButton.addEventListener('click', handleUpdateProduct);
+// Escucha el evento 'click' en el botón de ACTUALIZAR y llama a openModal
+updateButton.addEventListener('click', openModal);
+
+// Agregar listener de evento 'change' a modal
+confirmModalButton.addEventListener('click', confirmModal);
+cancelModalButton.addEventListener('click', cancelModal);
 
 // Llamamos a handleSelectFamilyChange inicialmente para cargar productos cuando se carga la página o cambia selectFamily inicialmente
 handleSelectFamilyChange();

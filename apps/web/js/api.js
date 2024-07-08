@@ -118,12 +118,12 @@ export async function getLatestProducts() {
     });
 }
 
-async function updateProduct(productId, updatedProductData) {
+export async function updateProductapi(productId, updatedProductData) {
     const url = `${API_URL}/api/products/update/${productId}`;
 
     try {
         const response = await fetch(url, {
-            method: 'PUT',
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
