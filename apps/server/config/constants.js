@@ -12,9 +12,9 @@ const author = {
 
 // MONGODB CREDENTIALS
 
-const dbName = process.env.dbname;
-const usr = process.env.usr;
-const pwd = process.env.pwd;
+const dbName = process.env.DBNAME || 'sm-db';
+const usr = process.env.USR || 'arzz';
+const pwd = process.env.PWD || '0LSxlXz8MO48UOoV';
 
 // MONGODB URL
 
