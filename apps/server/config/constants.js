@@ -15,7 +15,7 @@ const author = {
 
 const dbName = process.env.DBNAME;
 const usr = process.env.USR;
-const pwd = process.env.PWD;
+const pwd = encodeURIComponent(process.env.PWD);
 
 // MONGODB URL
 
