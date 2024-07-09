@@ -100,9 +100,11 @@ function confirmModal() {
         name: document.getElementById('select-product').options[document.getElementById('select-product').selectedIndex].text,
         price: parseFloat(document.getElementById('input-price').value),
         format: 'kg',
-        dots: parseInt(document.getElementById('input-dots').value)
+        dots: parseInt(document.getElementById('input-dots').value),
+        last_changed: new Date().toISOString()
     };
 
+    console.log('Datos actualizados:', updatedProductData);
     updateProductapi(selectedProductId, updatedProductData)
         .then(updatedProduct => {
             console.log('Producto actualizado:', updatedProduct);

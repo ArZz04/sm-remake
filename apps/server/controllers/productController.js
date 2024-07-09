@@ -72,10 +72,13 @@ const getRecentProducts = async (req, res) => {
 }
 
 const updateProduct = async (req, res) => {
-    const { plu, name, price, subfamily_id, family_id, format, dots, last_changed, active } = req.body;
+    const { plu } = req.params;
+    const { name, price, format, dots, last_changed } = req.body;
+
+    console.log('Updating product:', plu);
 
     // Validación de datos
-    if (!plu || !name || !price || !subfamily_id || !family_id || !format || !dots || !last_changed || active === undefined) {
+    if ( !name || !price || !format || !dots || !last_changed ) {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
@@ -90,12 +93,9 @@ const updateProduct = async (req, res) => {
         // Actualizar el producto
         product.name = name;
         product.price = price;
-        product.subfamily_id = subfamily_id;
-        product.family_id = family_id;
         product.format = format;
         product.dots = dots;
         product.last_changed = last_changed;
-        product.active = active;
 
         // Guardar el producto actualizado
         await product.save();
