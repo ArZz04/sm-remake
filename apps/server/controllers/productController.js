@@ -72,20 +72,17 @@ const getRecentProducts = async (req, res) => {
 }
 
 const updateProduct = async (req, res) => {
-    const { plu } = req.params;
+    const { product_plu  } = req.params;
     const { name, price, format, dots, last_changed } = req.body;
-
-    console.log('Updating product:', plu);
 
     // Validación de datos
     if ( !name || !price || !format || !dots || !last_changed ) {
-        return res.status(400).json({ error: 'All fields are required' });
+        return res.status(400).json({ error: `All fields are required for plu: ${product_plu}` });
     }
 
     try {
         // Verificar si el producto existe
-        const product = await Product
-            .findOne({ plu });
+        const product = await Product.findOne({ plu: product_plu });
         if (!product) {
             return res.status(404).json({ error: 'Product not found' });
         }

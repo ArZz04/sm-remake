@@ -20,6 +20,11 @@ function clearInputFields() {
     inputPrice.value = '';
 }
 
+function deselectSelectProduct() {
+    selectFamily.value = '0';
+    selectProduct.value = '0';
+}
+
 getFamilies()
     .then(data => {
         if (data) {
@@ -94,6 +99,7 @@ function handleSelectProductChange() {
 }
 
 function confirmModal() {
+    // Obtenemos el ID del producto seleccionado y lo hacemos integer
     const selectedProductId = selectProduct.value;
 
     const updatedProductData = {
@@ -104,11 +110,11 @@ function confirmModal() {
         last_changed: new Date().toISOString()
     };
 
-    console.log('Datos actualizados:', updatedProductData);
     updateProductapi(selectedProductId, updatedProductData)
         .then(updatedProduct => {
-            console.log('Producto actualizado:', updatedProduct);
             // Aquí puedes actualizar selectProduct con los datos actualizados si es necesario
+            cancelModal(); // Cerramos el modal
+            deselectSelectProduct();
             handleSelectProductChange();
         })
         .catch(error => {
