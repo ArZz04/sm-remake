@@ -2,3 +2,5 @@
 .nx/installation
 .nx/cache
 .nx/workspace-data
+apps/server/node_modules
+apps/server/package-lock.json
