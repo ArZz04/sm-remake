@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 // APP OPTIONS
 const PORT = process.env.PORT || 3000;
@@ -12,9 +13,9 @@ const author = {
 
 // MONGODB CREDENTIALS
 
-const dbName = process.env.DBNAME || 'sm-db';
-const usr = process.env.USR || 'arzz';
-const pwd = process.env.PWD || '0LSxlXz8MO48UOoV';
+const dbName = process.env.DBNAME;
+const usr = process.env.USR;
+const pwd = process.env.PWD;
 
 // MONGODB URL
 

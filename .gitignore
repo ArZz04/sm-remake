@@ -4,3 +4,4 @@
 .nx/workspace-data
 apps/server/node_modules
 apps/server/package-lock.json
+apps/server/.env
