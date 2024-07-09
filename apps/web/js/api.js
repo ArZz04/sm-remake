@@ -1,4 +1,4 @@
-const API_URL =  'http://localhost:8000';
+const API_URL =  'http://localhost:3000';
 
 export async function getProducts() {
     const url = `${API_URL}/api/products/all`;
@@ -23,8 +23,8 @@ export async function getProducts() {
     });
 }
 
-export async function getProductsByCategory(categoryId) {
-    const url = `${API_URL}/api/products/category/${categoryId}`;
+export async function getProductsByFamilyId(familyId) {
+    const url = `${API_URL}/api/products/family/${familyId}`;
 
     return fetch(url, {
         method: 'GET',
@@ -47,7 +47,7 @@ export async function getProductsByCategory(categoryId) {
 }
 
 export async function getProductById(productId) {
-    const url = `${API_URL}/api/products/byid/${productId}`;
+    const url = `${API_URL}/api/products/byplu/${productId}`;
 
     return fetch(url, {
         method: 'GET',
@@ -71,7 +71,7 @@ export async function getProductById(productId) {
 }
 
 export async function getFamilies() {
-    const url = `${API_URL}/api/categories/all`;
+    const url = `${API_URL}/api/families/all`;
 
     return fetch(url, {
         method: 'GET',

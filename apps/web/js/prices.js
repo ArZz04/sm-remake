@@ -1,4 +1,4 @@
-import { getFamilies, getProductsByCategory, getProductById, updateProductapi } from './api.js';
+import { getFamilies, getProductsByFamilyId, getProductById, updateProductapi } from './api.js';
 import { openModal, cancelModal } from './modal.js';
 
 const selectFamily = document.getElementById('select-family');
@@ -23,12 +23,10 @@ function clearInputFields() {
 getFamilies()
     .then(data => {
         if (data) {
-            //console.log('Familias:', data);
-
             for (let i = 0; i < data.length; i++) {
                 const optionFamily = document.createElement('option');
-                optionFamily.value = data[i].id;
-                optionFamily.textContent = data[i].category;
+                optionFamily.value = data[i].family_id;
+                optionFamily.textContent = data[i].name;
                 selectFamily.appendChild(optionFamily);
             }
         }
@@ -37,7 +35,8 @@ getFamilies()
 // Función para manejar cambios en selectFamily
 function handleSelectFamilyChange() {
     if (selectFamily.value && selectFamily.value !== '0') {
-        getProductsByCategory(selectFamily.value)
+        console.log('Familia seleccionada:', selectFamily.value);
+        getProductsByFamilyId(selectFamily.value)
             .then(data => {
                 // Limpiamos selectProduct antes de añadir nuevas opciones
                 selectProduct.innerHTML = '<option value="0">Seleccionar Producto</option>';
@@ -45,7 +44,7 @@ function handleSelectFamilyChange() {
                 // Iteramos sobre los datos y creamos opciones para selectProduct
                 data.forEach(product => {
                     const optionProduct = document.createElement('option');
-                    optionProduct.value = product.id;
+                    optionProduct.value = product.plu;
                     optionProduct.textContent = product.name;
                     selectProduct.appendChild(optionProduct);
                 });

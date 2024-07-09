@@ -112,16 +112,12 @@ const updateProduct = async (req, res) => {
 const newProduct = async (req, res) => {
     const { plu, name, price, subfamily_id, family_id, format, dots, last_changed, active } = req.body;
 
-    console.log('Request body:', req.body);
-
     // Validación de datos
     if (!plu || !name || !price || !subfamily_id || !family_id || !format || !dots || !last_changed || active === undefined) {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
     try {
-        // Verificar si ya existe un producto con el mismo plu
-        console.log('Checking existing product with PLU:', plu);
         const existingProduct = await Product.findOne({ plu });
         if (existingProduct) {
             return res.status(400).json({ error: 'A product with this PLU already exists' });
@@ -131,13 +127,11 @@ const newProduct = async (req, res) => {
         const product = new Product({ plu, name, price, subfamily_id, family_id, format, dots, last_changed, active });
 
         // Guardar el producto en la base de datos
-        console.log('Saving new product:', product);
         await product.save();
 
         // Respuesta exitosa
         res.status(201).json({ message: 'Product registered successfully', product });
     } catch (error) {
-        console.error('Error registering product:', error);
         res.status(500).json({ error: 'Registration failed', details: error.message });
     }
 };

@@ -1,5 +1,6 @@
 // IMPORTS LIBRARIES
-const express = require('express')
+const express = require('express');
+const cors = require('cors');
 
 // IMPORTS FOLDERS
 const { dbConnection } = require('./config/mongo');
@@ -7,19 +8,27 @@ const { PORT, author } = require('./config/constants');
 
 // ROUTES
 const productRoutes = require('./routes/productRoute');
+const familyRoutes = require('./routes/familyRoute');
 
 // INITIALIZES APPS
 const app = express();
-// Middleware para analizar JSON
+
 app.use(express.json());
-// Middleware para analizar formularios URL-encoded
 app.use(express.urlencoded({ extended: true }));
+
+var corsOptions = {
+    origin: 'http://127.0.0.1:5500',
+    optionsSuccessStatus: 200 // For legacy browser support
+}
+
+app.use(cors(corsOptions));
 
 // CONSTANTS DECLARATION
 
 // ENDPOINTS DEFAULTS
 
-app.use('/api/product', productRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/families', familyRoutes);
 
 
 app.get('/', (req, res) => {
