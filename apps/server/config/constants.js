@@ -20,7 +20,7 @@ const pwd = encodeURIComponent(process.env.PWD);
 // MONGODB URL
 
 const MONGO_URI = `mongodb+srv://${usr}:${pwd}@${dbName}.0z7r5tf.mongodb.net/?retryWrites=true&w=majority&appName=${dbName}`;
-const MONGO_URI_LOCAL = `mongodb://localhost:27017/${dbName}`;
+// const MONGO_URI_LOCAL = `mongodb://localhost:27017/${dbName}`;
 
 
 module.exports = {
