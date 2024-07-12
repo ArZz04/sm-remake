@@ -40,7 +40,6 @@ getFamilies()
 // Función para manejar cambios en selectFamily
 function handleSelectFamilyChange() {
     if (selectFamily.value && selectFamily.value !== '0') {
-        console.log('Familia seleccionada:', selectFamily.value);
         getProductsByFamilyId(selectFamily.value)
             .then(data => {
                 // Limpiamos selectProduct antes de añadir nuevas opciones
@@ -57,7 +56,7 @@ function handleSelectFamilyChange() {
                 // Llamamos a handleSelectProductChange para actualizar el precio si ya hay un producto seleccionado
                 handleSelectProductChange();
 
-            })
+            }) 
             .catch(error => {
                 console.error('Error al obtener productos:', error);
                 clearInputFields(); // Limpiamos los campos si hay un error
@@ -75,7 +74,6 @@ function handleSelectFamilyChange() {
 function handleSelectProductChange() {
     const selectedProductId = selectProduct.value;
     if (selectedProductId !== '0') {
-        console.log('Producto seleccionado:', selectedProductId);
         getProductById(selectedProductId)
             .then(selectedProduct => {
                 if (selectedProduct) {

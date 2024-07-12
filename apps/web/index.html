@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aquí va tu descripción corta y precisa sobre el contenido de la página.">
   <title>SANTA MARIA | OBRADOR</title>
-  <link href="css/output.css" rel="stylesheet">
-  <link href="style.css" rel="css/stylesheet" >
+  <link href="public/css/style.css" rel="css/stylesheet" >
+  <link href="public/css/output.css" rel="stylesheet">
 </head>
 <body class="bg-stone-800">
 
@@ -27,8 +28,8 @@
                 <div class="flex space-y-0 space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   <a href="" class="bg-stone-900 text-white rounded-md px-3 py-2 text-lg font-medium" aria-current="page">Inicio</a>
-                  <a href="prices.html" class="text-gray-300 hover:bg-stone-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">prices</a>
-                  <a href="#" class="text-gray-300 hover:bg-stone-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">Horarios</a>
+                  <a href="prices.html" class="text-gray-300 hover:bg-stone-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">Precios</a>
+                  <!-- <a href="#" class="text-gray-300 hover:bg-stone-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">Horarios</a> -->
                 </div>
               </div>
             </div>
@@ -43,8 +44,8 @@
           <div class="space-y-1 px-2 pb-3 pt-6">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="/" class="bg-stone-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Inicio</a>
-            <a href="precios.html" class="text-gray-300 hover:bg-stone-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Precios</a>
-            <a href="#" class="text-gray-300 hover:bg-stone-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Horarios</a>
+            <a href="prices.html" class="text-gray-300 hover:bg-stone-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Precios</a>
+            <!-- <a href="#" class="text-gray-300 hover:bg-stone-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Horarios</a> -->
           </div>
         </div>
       </nav>
@@ -57,25 +58,25 @@
                 <h1 class="text-white text-center pb-5 text-3xl">PANTALLAS</h1>
           
               <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 ">
-                <a href="./screens/res.html" class="group">
+                <a href="public/routes/res.html" class="group">
                   <div class="aspect-h-1 aspect-w-1/2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                     <img src="public/images/res.png" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
                   </div>
                   <h2 class="mt-4 text-2xl text-white">RES</h2>
                 </a>
-                <a href="./screens/cerdo.html" class="group">
+                <a href="public/routes/cerdo.html" class="group">
                   <div class="aspect-h-1 aspect-w-1/2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                     <img src="public/images/cerdo.png" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
                   </div>
                   <h2 class="mt-4 text-2xl text-white ">CERDO</h2>      
                 </a>
-                <a href="./screens/pollo.html" class="group">
+                <a href="public/routes/pollo.html" class="group">
                   <div class="aspect-h-1 aspect-w-1/2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                     <img src="public/images/pollo.png" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
                   </div>
                   <h2 class="mt-4 text-2xl text-white">POLLO</h2>
                 </a>
-                <a href="./screens/marisco.html" class="group">
+                <a href="public/routes/marisco.html" class="group">
                   <div class="aspect-h-1 aspect-w-1/2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                     <img src="public/images/marisco.png" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
                   </div>
@@ -131,6 +132,6 @@
         </footer>
 
     </main>
-    <script src="./js/index.js" type="module"></script>
+    <script src="public/js/index.js" type="module"></script>
 </body>
 </html>

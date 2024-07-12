@@ -953,6 +953,12 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242, 146, 146 / var(--tw-bg-opacity));
+}
+
+
 
 .bg-gray-50 {
   --tw-bg-opacity: 1;
@@ -1175,6 +1181,11 @@ video {
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
+.text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(242 146 146 / var(--tw-text-opacity));
+}
+
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1223,13 +1234,37 @@ video {
 @font-face {
   font-family: 'TheNextFont';
 
-  src: url('../public/fonts/TheNextFont.ttf') format('truetype');
+  src: url('/apps/web/public/fonts/TheNextFont.ttf') format('truetype');
 
-  /* Puedes agregar más formatos según los archivos que tengas disponibles */
 }
+
+@font-face {
+  font-family: 'Oswald';
+
+  src: url('/apps/web/public/fonts/Oswald-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Oswald';
+
+  src: url('/apps/web/public/fonts/Oswald-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
 
 body{
   font-family: 'TheNextFont';
+}
+
+thead{
+  font-family: 'Oswald';
+  font-weight: 600;
+}
+
+tbody{
+  font-family: 'Oswald';
+  font-weight: 400;
 }
 
 @media (min-width: 1280px) {
