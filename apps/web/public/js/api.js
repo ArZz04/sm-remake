@@ -69,6 +69,29 @@ export async function getProductById(productId) {
     });
 
 }
+export async function getProductsBySubfamilyId(subfamilyId) {
+    const url = `${API_URL}/api/products/subfamily/${subfamilyId}`;
+
+    return fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al obtener el producto');
+        }
+        return response.json();
+    })
+    .then(data => {
+        return data;
+    })
+    .catch(error => {
+        console.error('Error al conectar con la api:', error);
+    });
+
+}
 
 export async function getFamilies() {
     const url = `${API_URL}/api/families/all`;

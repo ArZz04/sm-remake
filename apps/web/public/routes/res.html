@@ -5,20 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RES</title>
     <style>
+
+        @font-face {
+        font-family: 'TheNextFont';
+        src: url('/apps/web/public/fonts/TheNextFont.ttf') format('truetype');
+        }
+
         html, body {
+            font-family: TheNextFont;
             overflow: hidden;
             margin: 0;
             padding: 0;
         }
-        object {
+        .svg {
             width: 100%;
             height: 100%;
         }
+
     </style>
 </head>
 <body>
+<svg class="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080">    
+    <path d="M0 0 C633.6 0 1267.2 0 1920 0 C1920 356.4 1920 712.8 1920 1080 C1286.4 1080 652.8 1080 0 1080 C0 723.6 0 367.2 0 0 Z M59 59 C59 376.46 59 693.92 59 1021 C653.66 1021 1248.32 1021 1861 1021 C1861 703.54 1861 386.08 1861 59 C1266.34 59 671.68 59 59 59 Z " 
+    fill="#1B1B1B" 
+    transform="translate(0,0)"/>
     
-    <object type="image/svg+xml" data="../svgs/marco.svg" id="svg-object"></object>
+    <path d="M0 0 C600.6 0 1201.2 0 1820 0 C1820 323.4 1820 646.8 1820 980 C1219.4 980 618.8 980 0 980 C0 656.6 0 333.2 0 0 Z M9 9 C9 326.46 9 643.92 9 971 C603.66 971 1198.32 971 1811 971 C1811 653.54 1811 336.08 1811 9 C1216.34 9 621.68 9 9 9 Z " 
+    fill="#EC3646" 
+    transform="translate(50,50)"/>
 
+    <foreignObject x="100" y="100" width="1920" height="1080">
+         <!-- <div class="main box1">
+            <div style="display: flex; gap:30px ; margin-bottom: 20px; ">
+                <img src="../images/logo.png" alt="" style="height: 400px ;width: 500px;">
+                <screen-sm id="s1" class="container" style="position: absolute; left: 510px ; top: 30px"></screen-sm>
+            </div>
+            <div >
+                <img src="../resources/res1_title.png" alt="">
+                <screen-sm id="s2" class="container" style="position: absolute; left:400px; top: 435px;"></screen-sm>
+            </div>
+            
+            <screen-sm id="s3" class="container" style="position: absolute; top: 545px"></screen-sm>
+        </div> -->
+
+        <div class="main box2">
+            <div style="display: flex; gap:30px ; margin-bottom: 20px; ">
+                <img src="../images/logo.png" alt="" style="height: 400px ;width: 500px;">
+                <screen-sm id="s4" class="container"></screen-sm>
+            </div>
+            <div>
+                <img src="../resources/res2_title.png" alt="">
+                <screen-sm id="s5" class="container"></screen-sm>
+            </div>
+            
+            <screen-sm id="s6" class="container"></screen-sm>
+        </div>
+
+        <!-- <div class="main box3">
+            <div style="display: flex; gap:30px ; margin-bottom: 20px; ">
+                <img src="../images/logo.png" alt="" style="height: 400px ;width: 500px;">
+                <screen-sm id="s7" class="container"></screen-sm>
+            </div>
+            <div>
+                <img src="../resources/res3_title.png" alt="">
+                <screen-sm id="s8" class="container"></screen-sm>
+            </div>
+            
+            <screen-sm id="s9" class="container"></screen-sm>
+        </div> -->
+    </foreignObject>
+    
+</svg>
+<script src="../js/products.js"></script>
+<script src="../components/componentRes1.js" type="module"></script>
+<script src="../components/componentRes2.js" type="module"></script>
+<script src="../components/componentRes3.js" type="module"></script>
 </body>
 </html>
