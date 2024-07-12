@@ -14,7 +14,7 @@ const getProductFilteredBySubfamily = async (req, res) => {
     const { subfamily_id } = req.params;
 
     try {
-        const products = await Product.find({ subfamily_id });
+        const products = await Product.find({ subfamily_id }).sort({ plu: 1 });
         res.json(products);
     } catch (error) {
         console.error('Error fetching products:', error);
@@ -26,7 +26,7 @@ const getProductFilteredByFamily = async (req, res) => {
     const { family_id } = req.params;
 
     try {
-        const products = await Product.find({ family_id });
+        const products = await Product.find({ family_id }).sort({name : 1 });
         res.json(products);
     } catch (error) {
         console.error('Error fetching products:', error);
