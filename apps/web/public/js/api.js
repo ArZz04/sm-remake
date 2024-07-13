@@ -1,4 +1,6 @@
-const API_URL =  'http://localhost:3000';
+// IF DEV.env
+
+const API_URL =  'https://api-sm.arzz.site';
 
 export async function getProducts() {
     const url = `${API_URL}/api/products/all`;
