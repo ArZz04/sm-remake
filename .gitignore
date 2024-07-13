@@ -6,3 +6,5 @@ apps/server/node_modules
 apps/server/package-lock.json
 apps/server/.env
 apps/web/public/css/output.css
+apps/web/public/css/output.css
+apps/web/public/css/output.css
