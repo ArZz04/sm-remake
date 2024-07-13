@@ -28,7 +28,7 @@ app.use(cors(corsOptions));
 // ENDPOINTS DEFAULTS
 
 app.use('/api/products', productRoutes);
-app.use('/api/families', familyRoutes);
+app.use('/api/categories', familyRoutes);
 
 
 app.get('/', (req, res) => {
