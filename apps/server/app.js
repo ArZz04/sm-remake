@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 var corsOptions = {
-    origin: 'http://127.0.0.1:5500',
+    origin: ["sm.arzz.site", "http://127.0.0.1:5500"],
     optionsSuccessStatus: 200 // For legacy browser support
 }
 
