@@ -10,10 +10,10 @@ class Screen {
             productElement.classList.add('product');
             productElement.innerHTML = `
                 <div class="product-info" style="display: flex; color: #1b1b1b">
-                    <p class="product-name" style="font-size: 40px; margin: 0px">${product.name}</p>
-                    <p class="product-dots" style="font-size: 35px; margin: 0px">${'.'.repeat(product.dots)}</p>
-                    <p class="product-price" style="font-size: 40px; margin: 0px">$${product.price}</p>
-                    <p class="product-format" style="font-size: 30px; margin: 0px">${product.format}</p>
+                    <p class="product-name text-40 m0">${product.name}</p>
+                    <p class="product-dots text-35 m0">${'.'.repeat(product.dots)}</p>
+                    <p class="product-price text-40 m0">$${product.price}</p>
+                    <p class="product-format text-30 m0">${product.format}</p>
                 </div>
             `;
             container.appendChild(productElement);
