@@ -1241,14 +1241,14 @@ video {
 @font-face {
   font-family: 'Oswald';
 
-  src: url('/apps/web/public/fonts/Oswald-SemiBold.ttf') format('truetype');
+  src: url('../fonts/Oswald-SemiBold.ttf') format('truetype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'Oswald';
 
-  src: url('/apps/web/public/fonts/Oswald-Regular.ttf') format('truetype');
+  src: url('../fonts/Oswald-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
