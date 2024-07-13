@@ -1,4 +1,4 @@
-// IF DEV.env
+
 
 const API_URL =  'https://api-sm.arzz.site';
 
