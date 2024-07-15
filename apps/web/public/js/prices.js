@@ -1,5 +1,5 @@
 import { getFamilies, getProductsByFamilyId, getProductById, updateProductapi } from './api.js';
-import { openModal, cancelModal } from './modal.js';
+import { openModal, cancelModal, openErrorModal } from './modal.js';
 
 const selectFamily = document.getElementById('select-family');
 const selectProduct = document.getElementById('select-product');
@@ -116,7 +116,9 @@ function confirmModal() {
             handleSelectProductChange();
         })
         .catch(error => {
-            console.error('Error al actualizar el producto:', error);
+            cancelModal();
+            openErrorModal();
+            clearInputFields();
         });
 }
 
