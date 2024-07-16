@@ -1238,21 +1238,21 @@ video {
 @font-face {
   font-family: 'TheNextFont';
 
-  src: url('../public/fonts/TheNextFont.ttf') format('truetype');
+  src: url('../fonts/TheNextFont.ttf') format('truetype');
 
 }
 
 @font-face {
   font-family: 'Oswald';
 
-  src: url('../public/fonts/Oswald-SemiBold.ttf') format('truetype');
+  src: url('../fonts/Oswald-SemiBold.ttf') format('truetype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'Oswald';
 
-  src: url('../public/fonts/Oswald-Regular.ttf') format('truetype');
+  src: url('../fonts/Oswald-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
