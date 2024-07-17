@@ -1,3 +1,4 @@
+import { fetchDataAndUpdateCookie } from './cookies.js';
 const API_URL =  'https://api-sm.arzz.site';
 
 export async function getProducts() {
