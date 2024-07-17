@@ -7,6 +7,7 @@ export async function fetchDataAndUpdateCookie(apiUrl, cookieName) {
                 'Content-Type': 'application/json'
             },
         });
+
         if (response.ok) {
             const data = await response.json();
             const apiData = JSON.stringify(data);
@@ -15,10 +16,8 @@ export async function fetchDataAndUpdateCookie(apiUrl, cookieName) {
 
             if (currentCookie !== apiData) {
                 setCookie(cookieName, apiData, 7);
-                console.log(`Cookie ${cookieName} actualizada:`, apiData);
                 return data;  // Devuelve los datos actualizados
             } else {
-                console.log(`La cookie ${cookieName} no ha cambiado`);
                 return JSON.parse(currentCookie);  // Devuelve los datos actuales de la cookie
             }
         } else {
@@ -26,6 +25,14 @@ export async function fetchDataAndUpdateCookie(apiUrl, cookieName) {
         }
     } catch (error) {
         console.error('Error en la solicitud a la API:', error);
+
+        // Si hay un error en la conexión, usa los datos almacenados en la cookie
+        const cachedData = getCookie(cookieName);
+        if (cachedData) {
+            return JSON.parse(cachedData);  // Devuelve los datos almacenados en la cookie
+        } else {
+            return null;  // O maneja el caso en que no hay datos disponibles
+        }
     }
 }
 
@@ -42,4 +49,5 @@ function setCookie(name, value, days) {
     d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
     const expires = "expires=" + d.toUTCString();
     document.cookie = `${name}=${value}; ${expires}; path=/`;
+    console.log(`Cookie establecida: ${name}=${value}; ${expires}; path=/`);
 }

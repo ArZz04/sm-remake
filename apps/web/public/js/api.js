@@ -70,28 +70,12 @@ export async function getProductById(productId) {
     });
 
 }
+
 export async function getProductsBySubfamilyId(subfamilyId) {
     const url = `${API_URL}/api/products/subfamily/${subfamilyId}`;
+    const cookieName = `productsSubfamily${subfamilyId}`;
 
-    return fetch(url, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error al obtener el producto');
-        }
-        return response.json();
-    })
-    .then(data => {
-        return data;
-    })
-    .catch(error => {
-        console.error('Error al conectar con la api:', error);
-    });
-
+    return fetchDataAndUpdateCookie(url, cookieName);
 }
 
 export async function getFamilies() {

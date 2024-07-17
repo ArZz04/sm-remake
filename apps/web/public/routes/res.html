@@ -5,62 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RES</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/formater.css">
 </head>
 <body>
-<svg class="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080">    
-    <path d="M0 0 C633.6 0 1267.2 0 1920 0 C1920 356.4 1920 712.8 1920 1080 C1286.4 1080 652.8 1080 0 1080 C0 723.6 0 367.2 0 0 Z M59 59 C59 376.46 59 693.92 59 1021 C653.66 1021 1248.32 1021 1861 1021 C1861 703.54 1861 386.08 1861 59 C1266.34 59 671.68 59 59 59 Z " 
-    fill="#1B1B1B" 
-    transform="translate(0,0)"/>
-    
-    <path d="M0 0 C600.6 0 1201.2 0 1820 0 C1820 323.4 1820 646.8 1820 980 C1219.4 980 618.8 980 0 980 C0 656.6 0 333.2 0 0 Z M9 9 C9 326.46 9 643.92 9 971 C603.66 971 1198.32 971 1811 971 C1811 653.54 1811 336.08 1811 9 C1216.34 9 621.68 9 9 9 Z " 
-    fill="#EC3646" 
-    transform="translate(50,50)"/>
+<svg class="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1280" height="720">    
+    <path d="M0 0 C422.4 0 844.8 0 1280 0 C1280 237.6 1280 475.2 1280 720 C857.6 720 435.2 720 0 720 C0 482.4 0 244.8 0 0 Z M42 42 C42 251.88 42 461.76 42 678 C437.01 678 832.02 678 1239 678 C1239 468.12 1239 258.24 1239 42 C843.99 42 448.98 42 42 42 Z " fill="#141414" transform="translate(0,0)"/>
+    <path d="M0 0 C400.29 0 800.58 0 1213 0 C1213 215.82 1213 431.64 1213 654 C812.71 654 412.42 654 0 654 C0 438.18 0 222.36 0 0 Z M8 9 C8 218.88 8 428.76 8 645 C403.01 645 798.02 645 1205 645 C1205 435.12 1205 225.24 1205 9 C809.99 9 414.98 9 8 9 Z " fill="#FA3243" transform="translate(34,33)"/>
 
-    <foreignObject x="100" y="100" width="1920" height="1080">
+
+    <!-- <foreignObject x="42" y="42" width="1196" height="636"> -->
+    <foreignObject x="0" y="0" width="1280" height="720">
+        <img src="../images/logo.png" class="logo"  alt="">
          <div class="main box">
-            <div style="display: flex; gap:30px ; margin-bottom: 20px; ">
-                <img src="../images/logo.png" alt="" style="height: 400px ;width: 500px;">
-                <screen-sm id="s1" class="container" style="position: absolute; left: 510px ; top: 30px"></screen-sm>
+            <div style="display: flex; gap:30px ; margin-bottom: 20px;">
+                <screen-sm id="s1" class="container text-30"></screen-sm>
             </div>
             <div >
-                <img src="../resources/res1_title.png" alt="">
-                <screen-sm id="s2" class="container" style="position: absolute; left:400px; top: 435px;"></screen-sm>
+                <img src="../resources/res1_title.png" class="title" alt="">
+                <screen-sm id="s2" class="container text-25"></screen-sm>
             </div>
             
-            <screen-sm id="s3" class="container" style="position: absolute; top: 545px"></screen-sm>
+            <screen-sm id="s3" class="container text-25"></screen-sm>
         </div>
 
         <div class="main box">
             <div style="display: flex; gap:30px ; margin-bottom: 20px; ">
-                <img src="../images/logo.png" alt="" style="height: 400px ;width: 500px;">
-                <screen-sm id="s4" class="container" ></screen-sm>
+                <screen-sm id="s4" class="container text-28"></screen-sm>
             </div>
             <div>
-                <img src="../resources/res2_title.png" alt="">
-                <screen-sm id="s5" class="container" style="position: absolute; left: 510px; top: 440px "></screen-sm>
+                <img src="../resources/res2_title.png" class="title" alt="">
+                <screen-sm id="s5" class="container text-25"></screen-sm>
             </div>
             
-            <screen-sm id="s6" class="container" style="position: absolute; top: 580px"></screen-sm>
+            <screen-sm id="s6" class="container text-25"></screen-sm>
         </div>
 
         <div class="main box">
             <div style="display: flex; gap:30px ; margin-bottom: 20px; ">
 
-                <img src="../images/logo.png" alt="" style="height: 400px ;width: 500px;">
-                <screen-sm id="s7" class="container"></screen-sm>
+                <screen-sm id="s7" class="container text-28"></screen-sm>
             </div>
             <div>
-                <img id="piezas" src="../resources/res_piezas.png" alt="">
-                <img src="../resources/res3_title.png" alt="">
-                <screen-sm id="s8" class="container" style="position: absolute; left: 485px; top: 500px "></screen-sm>
+                <img src="../resources/res_piezas.png" class="piezas" alt="">
+                <img src="../resources/res3_title.png" class="cortes title" alt="">
+                <screen-sm id="s8" class="container text-25"></screen-sm>
             </div>
             
-            <screen-sm id="s9" class="container"></screen-sm>
+            <screen-sm id="s9" class="container text-23"></screen-sm>
         </div>
     </foreignObject>
-    
 </svg>
-<script src="../js/products.js"></script>
 <script src="../components/componentRes1.js" type="module"></script>
 <script src="../components/componentRes2.js" type="module"></script>
 <script src="../components/componentRes3.js" type="module"></script>
