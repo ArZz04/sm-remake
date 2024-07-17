@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 var corsOptions = {
-    origin: ["https://web-sm.netlify.app", "http://127.0.0.1:5500", "https://arzz04.github.io/sm-remake"],
+    origin: ["https://web-sm.netlify.app", "http://127.0.0.1:5500", "https://arzz04.github.io"],
     optionsSuccessStatus: 200 // For legacy browser support
 }
 
