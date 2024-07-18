@@ -5,84 +5,62 @@
 
         position: absolute;
 
-        top: 22px;
-        left: -20px;
+        top: -22px;
+        left: -40px;
 
         transform:scale(0.67)
     }
 
-    .title{
-        position: absolute;
-        top: 339px;
-        left: -212px;
+    .box {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 30px;
+        box-sizing: border-box; /* Asegura que el padding se incluya dentro de las dimensiones totales */
+    
+        font-size: x-large;
+        overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+    }
+    
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
+        align-items: flex-end; /* Alinea los elementos al final del contenedor verticalmente */
+        grid-column: span 3; /* Hace que .top ocupe las tres columnas */
+    }
+    
+    .mid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Alinea los elementos al principio y al final del contenedor */
+        align-items: center; /* Alinea los elementos al centro del contenedor verticalmente */
+        grid-column: span 3; /* Hace que .mid ocupe las tres columnas */
+        position: relative; /* Posiciona elementos absolutamente dentro de este contenedor */
 
-        transform: scale(0.67);
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .mid img {
+        width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+        box-sizing: border-box; /* Asegura que el padding se incluya dentro de las dimensiones totales */
+    }
+    
+    .mid screen-sm {
+        position: absolute; /* Posiciona el screen-sm absolutamente */
+        top: 15px; /* Ajusta según sea necesario */
+        left: 280px; /* Ajusta según sea necesario */
+    }
+    
+    .bot {
     }
 
-    .cortes{
-        top: 360px !important;
-    }
-
-    .piezas{
-        position: absolute;
-        top: 321px;
-        left: 933px;
-
-        transform: scale(0.67);
-    }
-
-    #piezas{
-        position: absolute;
-        top: 403px;
-        left: 1371px;
-        z-index: -1;
-    }
-
-    .container{
-        position: absolute;
-    }
-
-    #s1, #s4, #s7{
-        top: 60px;
-        left: 410px;
-    }
-
-    #s2{
-        top: 380px;
-        left: 335px;
-
-        .product-info{
-            margin-bottom:0px !important;
-        }
-    }
-
-    #s3{
-        top: 445px;
-        left: 63.5px;
-
-        .product-info{
-            margin-bottom:0px !important;
-        }
-    }
-
-    #s5{
-        top: 380px;
-        left: 410px;
-    }
-
-    #s6{
-        top: 445px;
-        left: 63.5px;
-    }
-
-    #s8{
-        top: 393px;
-        left: 385px;
-    }
-
-    #s9{
-        top: 455px;
-        left: 63.5px;
+    .item {
     }
 
 
