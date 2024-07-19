@@ -17,7 +17,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 var corsOptions = {
-    origin: ["https://web-sm.netlify.app", "http://127.0.0.1:5500", "https://arzz04.github.io", "http://192.168.1.2:5500", "http://192.168.1.3:5500", "https://sm-remake.vercel.app", "https://sm.arzz.site", "http://sm.arzz.site"],
+    origin: [
+        "https://web-sm.netlify.app", 
+        "http://127.0.0.1:5500", 
+        "http://localhost:5500", 
+        "https://arzz04.github.io", 
+        "http://192.168.1.2:5500", 
+        "http://192.168.1.3:5500", 
+        "https://sm-remake.vercel.app", 
+        "https://sm.arzz.site", 
+        "http://sm.arzz.site"],
     optionsSuccessStatus: 200 // For legacy browser support
 }
 
