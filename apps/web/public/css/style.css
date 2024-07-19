@@ -76,19 +76,18 @@ html, body {
     margin-bottom: 4px;
     color: #1b1b1b;
     align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
+}
 
-    p{
-        font-size: 25px;
-    }
+.product-info p{
+    font-size: 25px;
+}
 
-    .product-dots{
-        font-size: 15px;
-    }
+.product-info .product-dots{
+    font-size: 15px;
+}
 
-    .product-format{
-        font-size: 15px;
-    }
-
+.product-info .product-format{
+    font-size: 15px;
 }
 
 .top {
@@ -98,16 +97,17 @@ html, body {
     grid-column: span 3; /* Hace que .top ocupe las tres columnas */
     width: 100%; /* Asegura que .top ocupe todo el ancho de .box */
     position: relative; /* Necesario para el posicionamiento absoluto de screen-sm */
+}
 
-    screen-sm{
-        width: 100%; /* Asegura que screen-sm ocupe todo el ancho de .top */
-    }
+.top screen-sm{
+    width: 100%; /* Asegura que screen-sm ocupe todo el ancho de .top */
+}
 
-    .spacer {
-        width: 360px; /* Ajusta el ancho según el espacio reservado deseado */
-        height: 260px; /* Asegura que ocupe toda la altura del contenedor .top */
-        flex-shrink: 0; /* Asegura que el espacio no se reduzca */
-    }
+.top .spacer{
+    width: 360px; /* Ajusta el ancho según el espacio reservado deseado */
+    height: 260px; /* Asegura que ocupe toda la altura del contenedor .top */
+    flex-shrink: 0; /* Asegura que el espacio no se reduzca */
+
 }
 
 .mid {
