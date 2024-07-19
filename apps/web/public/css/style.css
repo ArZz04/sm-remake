@@ -118,53 +118,55 @@ html, body {
     display: flex;
     justify-content: space-between; /* Alinea los elementos al principio y al final del contenedor */
     align-items: center; /* Alinea los elementos al centro del contenedor verticalmente */
+}
 
-    .boxi{
-        position: absolute; /* Posiciona .boxi absolutamente */
-        top: 0; /* Alinea .boxi al principio del contenedor .mid */
-        left: 0; /* Alinea .boxi al lado izquierdo del contenedor .mid */
-        width: 100%; /* Hace que .boxi ocupe el ancho completo del contenedor .mid */
-        display: flex;
-        justify-content: space-between; /* Alinea los elementos al principio y al final del contenedor */
-        align-items: center; /* Alinea los elementos al centro del contenedor verticalmente */
-    }
+.mid .boxi {
+    position: absolute; /* Posiciona .boxi absolutamente */
+    top: 0; /* Alinea .boxi al principio del contenedor .mid */
+    left: 0; /* Alinea .boxi al lado izquierdo del contenedor .mid */
+    width: 100%; /* Hace que .boxi ocupe el ancho completo del contenedor .mid */
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos al principio y al final del contenedor */
+    align-items: center; /* Alinea los elementos al centro del contenedor verticalmente */
+}
 
-    .spacer1 {
-        flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
-        width: 251px; /* Puedes ajustar el tamaño según sea necesario */
-        height: 77px; /* Puedes ajustar el tamaño según sea necesario */
-    }
-    .spacer2 {
-        flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
-        width: 338px; /* Puedes ajustar el tamaño según sea necesario */
-        height: 77px; /* Puedes ajustar el tamaño según sea necesario */
-    }
-    .spacer3 {
-        flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
-        width: 350px; /* Puedes ajustar el tamaño según sea necesario */
-        height: 77px; /* Puedes ajustar el tamaño según sea necesario */
-    }
+.mid .spacer1{
+    flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
+    width: 251px; /* Puedes ajustar el tamaño según sea necesario */
+    height: 77px; /* Puedes ajustar el tamaño según sea necesario */
+}
 
-    img {
-        width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
-        height: auto; /* Mantiene la proporción de la imagen */
-        max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
-        box-sizing: border-box; /* Asegura que el padding se incluya dentro de las dimensiones totales */
-    }
+.mid .spacer2{
+    flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
+    width: 338px; /* Puedes ajustar el tamaño según sea necesario */
+    height: 77px; /* Puedes ajustar el tamaño según sea necesario */
+}
 
-    screen-sm {
-        flex: 1; /* Ocupa el espacio restante en el contenedor */
-        margin-top: 10px;
-        margin-left: 10px;
-    }
+.mid .spacer3{
+    flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
+    width: 350px; /* Puedes ajustar el tamaño según sea necesario */
+    height: 77px; /* Puedes ajustar el tamaño según sea necesario */
+}
 
-    .pieces{
-        position: absolute; /* Posiciona la imagen absolutamente dentro del contenedor padre */
-        top: -42px; /* Ajusta la posición superior según sea necesario */
-        left: 970px; /* Ajusta la posición izquierda según sea necesario */
-        width: 196px; /* Establece un ancho específico para la imagen */
-        height: auto; /* Mantiene la proporción de la imagen */
-    }
+.mid img{
+    width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    box-sizing: border-box; /* Asegura que el padding se incluya dentro de las dimensiones totales */
+}
+
+.mid screen-sm{
+    flex: 1; /* Ocupa el espacio restante en el contenedor */
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.mid .pieces{
+    position: absolute; /* Posiciona la imagen absolutamente dentro del contenedor padre */
+    top: -42px; /* Ajusta la posición superior según sea necesario */
+    left: 970px; /* Ajusta la posición izquierda según sea necesario */
+    width: 196px; /* Establece un ancho específico para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
 .bot {
