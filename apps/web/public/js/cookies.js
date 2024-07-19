@@ -49,5 +49,4 @@ function setCookie(name, value, days) {
     d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
     const expires = "expires=" + d.toUTCString();
     document.cookie = `${name}=${value}; ${expires}; path=/`;
-    console.log(`Cookie establecida: ${name}=${value}; ${expires}; path=/`);
 }
