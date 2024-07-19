@@ -8,48 +8,48 @@ html, body {
     overflow: hidden;
     margin: 0;
     padding: 0;
+}
 
-    .m0{
-        margin: 0;
-    }
 
-    .more{
-        .product-info{
-            display: flex;
-            margin-bottom: 2px;
-            color: #1b1b1b;
-            align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
-        
-            p{
-                font-size: 23px;
-            }
-        
-            .product-dots{
-                font-size: 15px;
-            }
-        
-            .product-format{
-                font-size: 15px;
-            }
-        
-        }
-    }
+.m0{
+    margin: 0;
+}
 
-    .logo {
-        height: 364px;
-        width: 502px;
-        position: absolute;
-        top: -35px;
-        left: -56px;
-        transform: scale(0.67);
-    }
-
-    .spacer-pig{
-        flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
-        width: 300px; /* Puedes ajustar el tamaño según sea necesario */
-        height: 77px; /* Puedes ajustar el tamaño según sea necesario */
-    }
+.more{
+    .product-info{
+        display: flex;
+        margin-bottom: 2px;
+        color: #1b1b1b;
+        align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
     
+        p{
+            font-size: 23px;
+        }
+    
+        .product-dots{
+            font-size: 15px;
+        }
+    
+        .product-format{
+            font-size: 15px;
+        }
+    
+    }
+}
+
+.logo {
+    height: 364px;
+    width: 502px;
+    position: absolute;
+    top: -35px;
+    left: -56px;
+    transform: scale(0.67);
+}
+
+.spacer-pig{
+    flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
+    width: 300px; /* Puedes ajustar el tamaño según sea necesario */
+    height: 77px; /* Puedes ajustar el tamaño según sea necesario */
 }
 
 .svg {
