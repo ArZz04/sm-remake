@@ -1,32 +1,60 @@
-.logo {
-    height: 364px;
-    width: 502px;
-    position: absolute;
-    top: -35px;
-    left: -56px;
-    transform: scale(0.67);
+@font-face {
+    font-family: 'TheNextFont';
+    src: url('../fonts/TheNextFont.ttf') format('truetype');
+    }
+
+html, body {
+    font-family: TheNextFont;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    .m0{
+        margin: 0;
+    }
+
+    .more{
+        .product-info{
+            display: flex;
+            margin-bottom: 2px;
+            color: #1b1b1b;
+            align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
+        
+            p{
+                font-size: 23px;
+            }
+        
+            .product-dots{
+                font-size: 15px;
+            }
+        
+            .product-format{
+                font-size: 15px;
+            }
+        
+        }
+    }
+
+    .logo {
+        height: 364px;
+        width: 502px;
+        position: absolute;
+        top: -35px;
+        left: -56px;
+        transform: scale(0.67);
+    }
+    
 }
 
-.more{
-    .product-info{
-        display: flex;
-        margin-bottom: 2px;
-        color: #1b1b1b;
-        align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
-    
-        p{
-            font-size: 23px;
-        }
-    
-        .product-dots{
-            font-size: 15px;
-        }
-    
-        .product-format{
-            font-size: 15px;
-        }
-    
-    }
+.svg {
+    width: 100vw; /* Ajusta el ancho al 100% del viewport */
+    height: 100vh; /* Ajusta la altura al 100% del viewport */
+    display: block; /* Asegura que el SVG ocupe el espacio completo */
+}
+
+.main {
+    width: calc(100% - 42px); /* Ajusta el ancho según el espacio disponible */
+    height: auto;
 }
 
 .box {
