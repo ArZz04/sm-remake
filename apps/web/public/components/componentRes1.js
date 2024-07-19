@@ -11,9 +11,9 @@ class Screen {
             productElement.innerHTML = `
                 <div class="product-info" style="display: flex; margin-bottom:4px ; color: #1b1b1b">
                     <p class="product-name m0">${product.name}</p>
-                    <p class="product-dots text-25 m0">${'.'.repeat(product.dots)}</p>
+                    <p class="product-dots m0">${'.'.repeat(product.dots)}</p>
                     <p class="product-price m0">$${product.price}</p>
-                    <p class="product-format text-20 m0">${product.format}</p>
+                    <p class="product-format m0">${product.format}</p>
                 </div>
             `;
             container.appendChild(productElement);
