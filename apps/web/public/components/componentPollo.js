@@ -28,11 +28,9 @@ async function loadProducts() {
 
     const products1 = await getProductsBySubfamilyId(16);
     const products2 = await getProductsBySubfamilyId(17);
-    const products3 = await getProductsBySubfamilyId(18);
 
     const s1 = document.getElementById('s16');
     const s2 = document.getElementById('s17');
-    const s3 = document.getElementById('s18');
 
     s1.appendChild(Screen.renderProducts(products1));
     s2.appendChild(Screen.renderProducts(products2));

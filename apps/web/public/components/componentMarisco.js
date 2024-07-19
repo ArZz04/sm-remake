@@ -25,10 +25,9 @@ class Screen {
 
 async function loadProducts() {
 
+    const products1 = await getProductsBySubfamilyId(18);
 
-    const products1 = await getProductsBySubfamilyId(19);
-
-    const s1 = document.getElementById('s19');
+    const s1 = document.getElementById('s18');
 
     s1.appendChild(Screen.renderProducts(products1));
 
