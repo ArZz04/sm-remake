@@ -15,26 +15,23 @@ html, body {
     margin: 0;
 }
 
-.more{
-    .product-info{
-        display: flex;
-        margin-bottom: 2px;
-        color: #1b1b1b;
-        align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
-    
-        p{
-            font-size: 23px;
-        }
-    
-        .product-dots{
-            font-size: 15px;
-        }
-    
-        .product-format{
-            font-size: 15px;
-        }
-    
-    }
+.more .product-info{
+    display: flex;
+    margin-bottom: 2px;
+    color: #1b1b1b;
+    align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
+}
+
+.more .product-info p{
+    font-size: 23px;
+}
+
+.more .product-info .product-dots{
+    font-size: 15px;
+}
+
+.more .product-info .product-format{
+    font-size: 15px;
 }
 
 .logo {
