@@ -10,7 +10,6 @@ html, body {
     padding: 0;
 }
 
-
 .m0{
     margin: 0;
 }
@@ -169,51 +168,41 @@ html, body {
     height: auto; /* Mantiene la proporción de la imagen */
 }
 
-.bot {
-
-    .more1{
-        .product-info{
-            display: flex;
-            margin-bottom: 4px;
-            color: #1b1b1b;
-            align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
-        
-            p{
-                font-size: 23px;
-            }
-        
-            .product-dots{
-                font-size: 15px;
-            }
-        
-            .product-format{
-                font-size: 15px;
-            }
-        
-        }
-    }
-
-    .more2{
-        .product-info{
-            display: flex;
-            margin-bottom: 4px;
-            color: #1b1b1b;
-            align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
-        
-            p{
-                font-size: 24px;
-            }
-        
-            .product-dots{
-                font-size: 15px;
-            }
-        
-            .product-format{
-                font-size: 15px;
-            }
-        
-        }
-    }
+.bot .more1 .product-info{
+    display: flex;
+    margin-bottom: 4px;
+    color: #1b1b1b;
+    align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
 }
 
+.bot .more1 .product-info p{
+    font-size: 23px;
+}
+
+.bot .more1 .product-info .product-dots{
+    font-size: 15px;
+}
+
+.bot .more1 .product-info .product-format{
+    font-size: 15px;
+}
+
+.bot .more2 .product-info{
+    display: flex;
+    margin-bottom: 4px;
+    color: #1b1b1b;
+    align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
+}
+
+.bot .more2 .product-info p{
+    font-size: 24px;
+}
+
+.bot .more2 .product-info .product-dots{
+    font-size: 15px;
+}
+
+.bot .more2 .product-info .product-format{
+    font-size: 15px;
+}
 
