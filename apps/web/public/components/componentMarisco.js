@@ -26,7 +26,7 @@ class Screen {
 async function loadProducts() {
 
 
-    const products1 = await getProductsBySubfamilyId(16);
+    const products1 = await getProductsBySubfamilyId(19);
 
     const s1 = document.getElementById('s19');
 
