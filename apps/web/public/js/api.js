@@ -1,5 +1,5 @@
 import { fetchDataAndUpdateCookie } from './cookies.js';
-const API_URL =  'https://api-sm.arzz.site';
+const API_URL =  'https://api-sm-rrzt.onrender.com';
 
 export async function getProducts() {
     const url = `${API_URL}/api/products/all`;
