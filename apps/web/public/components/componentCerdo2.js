@@ -9,7 +9,7 @@ class Screen {
             const productElement = document.createElement('div');
             productElement.classList.add('product');
             productElement.innerHTML = `
-                <div class="product-info" style="display: flex; color: #1b1b1b">
+                <div class="product-info">
                     <p class="product-name m0">${product.name}</p>
                     <p class="product-dots m0">${'.'.repeat(product.dots)}</p>
                     <p class="product-price m0">$${product.price}</p>

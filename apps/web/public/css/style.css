@@ -43,6 +43,12 @@ html, body {
         left: -56px;
         transform: scale(0.67);
     }
+
+    .spacer-pig{
+        flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
+        width: 300px; /* Puedes ajustar el tamaño según sea necesario */
+        height: 77px; /* Puedes ajustar el tamaño según sea necesario */
+    }
     
 }
 
