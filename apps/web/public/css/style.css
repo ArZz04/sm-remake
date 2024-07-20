@@ -206,3 +206,22 @@ html, body {
     font-size: 15px;
 }
 
+.bot .product-info{
+    display: flex;
+    margin-bottom: 4px;
+    color: #1b1b1b;
+    align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
+}
+
+.bot .product-info p{
+    font-size: 30px;
+}
+
+.bot .product-info .product-dots{
+    font-size: 20px;
+}
+
+.bot .product-info .product-format{
+    font-size: 20px;
+}
+
