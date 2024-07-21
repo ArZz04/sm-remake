@@ -14,27 +14,36 @@ html, body {
     margin: 0;
 }
 
-.more .product-info{
+.top .more .product-info{
     display: flex;
     margin-bottom: 2px;
     color: #1b1b1b;
     align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
 }
 
-.more .product-info p{
+.top .more .product-info p{
     font-size: 23px;
 }
 
-.more .product-info .product-dots{
+.top .more .product-info .product-dots{
     font-size: 15px;
 }
 
-.more .product-info .product-format{
+.top .more .product-info .product-format{
     font-size: 15px;
 }
 
 .logo {
     height: 364px;
+    width: 502px;
+    position: absolute;
+    top: -35px;
+    left: -56px;
+    transform: scale(0.67);
+}
+
+.logo-xtra{
+    height: 432px;
     width: 502px;
     position: absolute;
     top: -35px;
@@ -100,6 +109,25 @@ html, body {
 
 .top screen-sm{
     width: 100%; /* Asegura que screen-sm ocupe todo el ancho de .top */
+}
+
+.big-text .product-info{
+    display: flex;
+    margin-bottom: 4px;
+    color: #1b1b1b;
+    align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
+}
+
+.big-text .product-info p{
+    font-size: 32px;
+}
+
+.big-text .product-info .product-dots{
+    font-size: 20px;
+}
+
+.big-text .product-info .product-format{
+    font-size: 20px;
 }
 
 .top .spacer{
@@ -225,3 +253,40 @@ html, body {
     font-size: 20px;
 }
 
+.box-m {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.middle {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-left: 6px; /* Empuja la imagen a la derecha */
+}
+
+
+.fr-mid {
+    flex: 0 0 390px;
+    max-width: 390px;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.middle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* O use 'cover' según tus necesidades */
+}
+
+screen-sm {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+}
