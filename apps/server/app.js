@@ -26,7 +26,8 @@ var corsOptions = {
         "http://192.168.1.3:5500", 
         "https://sm-remake.vercel.app", 
         "https://sm.arzz.site", 
-        "http://sm.arzz.site"],
+        "http://sm.arzz.site",
+        "http://localhost"],
     optionsSuccessStatus: 200 // For legacy browser support
 }
 
