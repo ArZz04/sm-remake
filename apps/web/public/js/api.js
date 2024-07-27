@@ -1,4 +1,4 @@
-import { fetchDataAndUpdateCookie } from './cookies.js';
+import { fetchDataAndUpdateCache } from './cache.js';
 const API_URL =  'https://api-sm-rrzt.onrender.com';
 
 export async function getProducts() {
@@ -73,9 +73,9 @@ export async function getProductById(productId) {
 
 export async function getProductsBySubfamilyId(subfamilyId) {
     const url = `${API_URL}/api/products/subfamily/${subfamilyId}`;
-    const cookieName = `productsSubfamily${subfamilyId}`;
+    const cacheName = `productsSubfamily${subfamilyId}`;
 
-    return fetchDataAndUpdateCookie(url, cookieName);
+    return fetchDataAndUpdateCache(url, cacheName);
 }
 
 export async function getFamilies() {

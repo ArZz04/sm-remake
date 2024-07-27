@@ -24,6 +24,391 @@ html, body {
 .top .more .product-info p{
     font-size: 23px;
 }
+/* VARIABLES */
+
+:root {
+    --font-size-p: 25px;
+    --font-size-dots: 15px;
+    --font-size-format: 15px;
+    
+
+    --color-schendule: #1b1b1b;
+    --color-product-info: #1b1b1b;
+}
+
+/* TAMANO DE FUENTES EN PANTALLAS */
+
+.product-info{
+    display: flex;
+    margin-bottom: 4px;
+    color: var(--color-product-info);
+
+    align-items: baseline; /* Alinea todos los elementos hijos verticalmente al centro */
+}
+
+.product-info p{
+    font-size: 25px;
+}
+
+.product-info .product-dots{
+    font-size: 15px;
+}
+
+.product-info .product-format{
+    font-size: 15px;
+}
+
+/* RES */
+
+/* 1ERA PANTALLA */
+
+    /* 2DA PANTALLA */
+        .bot .subst-mb .product-info{
+            margin-bottom: 2px;
+        }
+
+        .bot .subst-mb .product-info p{
+            font-size: 24px;
+        }
+
+        .bot .subst-mb .product-info .product-dots{
+            font-size: 15px;
+        }
+
+        .bot .subst-mb .product-info .product-format{
+            font-size: 15px;
+        }
+
+    /* 3ER PANTALLA (tiene tambien los valores de la 2da pantalla)  */
+
+        .top .subst-mb .product-info{
+            margin-bottom: 2px;
+        }
+
+        .top .subst-mb .product-info p{
+            font-size: 24px;
+        }
+
+        .top .subst-mb .product-info .product-dots{
+            font-size: 15px;
+        }
+
+        .top .subst-mb .product-info .product-format{
+            font-size: 15px;
+        }
+
+/* CERDO */
+
+    /* 1ERA PANTALLA */
+
+        .top .min-big-text .product-info p{
+            font-size: 26.5px;
+        }
+
+        .top .min-big-text .product-info .product-dots{
+            font-size: 15px;
+        }
+
+        .top .min-big-text .product-info .product-format{
+            font-size: 15px;
+        }
+
+        /* --------------- */
+
+        .mid .min-big-text .product-info p{
+            font-size: 26.5px;
+        }
+
+        .mid .min-big-text .product-info .product-dots{
+            font-size: 15px;
+        }
+
+        .mid .min-big-text .product-info .product-format{
+            font-size: 15px;
+        }
+
+        /* ---------------- */
+
+        .bot .mid-big-text .product-info p{
+            font-size: 28px;
+        }
+
+        .bot .mid-big-text .product-info .product-dots{
+            font-size: 15px;
+        }
+
+        .bot .mid-big-text .product-info .product-format{
+            font-size: 15px;
+        }
+
+    /* 2DA PANTALLA */
+
+        .top .big-text .product-info p{
+            font-size: 28px;
+        }
+
+        .top .big-text .product-info .product-dots{
+            font-size: 15px;
+        }
+
+        .top .big-text .product-info .product-format{
+            font-size: 15px;
+        }
+
+        /* --------------*/
+
+        .bot .big-text .product-info p{
+            font-size: 28px;
+        }
+
+        .bot .big-text .product-info .product-dots{
+            font-size: 15px;
+        }
+
+        .bot .big-text .product-info .product-format{
+            font-size: 15px;
+        }
+
+/* POLLO */
+
+    .top .super-big-text .product-info p{
+        font-size: 32px;
+    }
+
+    .top .super-big-text .product-info .product-dots{
+        font-size: 20px;
+    }
+
+    .top .super-big-text .product-info .product-format{
+        font-size: 20px;
+    }
+
+    .bot .super-big-text .product-info p{
+        font-size: 32px;
+    }
+
+    .bot .super-big-text .product-info .product-dots{
+        font-size: 20px;
+    }
+
+    .bot .super-big-text .product-info .product-format{
+        font-size: 20px;
+    }
+
+/* MARISCO */
+
+    .middle .mega-big-text .product-info p{
+        font-size: 35px;
+    }
+
+    .middle .mega-big-text .product-info .product-dots{
+        font-size: 25px;
+    }
+
+    .middle .mega-big-text .product-info .product-format{
+        font-size: 25px;
+    }
+
+/* ORGANIZACION VISUAL */
+
+@font-face {
+    font-family: 'TheNextFont';
+    src: url('../fonts/TheNextFont.ttf') format('truetype');
+    }
+
+html, body {
+    font-family: TheNextFont;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.m0{
+    margin: 0;
+}
+
+.logo {
+    height: 364px;
+    width: 502px;
+    position: absolute;
+    top: -35px;
+    left: -56px;
+    transform: scale(0.67);
+}
+
+.logo-xtra{
+    height: 432px;
+    width: 502px;
+    position: absolute;
+    top: -35px;
+    left: -56px;
+    transform: scale(0.67);
+}
+
+.schandule{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Asegura que los elementos se centren horizontalmente */
+
+    position: absolute;
+
+    top: 340px;
+    left: 60px;
+}
+
+.schandule .schandule-text{
+    margin: 0;
+
+    color: var(--color-schendule);;
+    font-size: 32px;
+}
+
+.spacer-pig{
+    flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
+    width: 300px; /* Puedes ajustar el tamaño según sea necesario */
+    height: 77px; /* Puedes ajustar el tamaño según sea necesario */
+}
+
+.svg {
+    width: 100vw; /* Ajusta el ancho al 100% del viewport */
+    height: 100vh; /* Ajusta la altura al 100% del viewport */
+    display: block; /* Asegura que el SVG ocupe el espacio completo */
+}
+
+.main {
+    width: calc(100% - 42px); /* Ajusta el ancho según el espacio disponible */
+    height: auto;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 15px;
+    box-sizing: border-box; /* Asegura que el padding se incluya dentro de las dimensiones totales */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+}
+
+
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Alinea los elementos al final del contenedor verticalmente */
+    grid-column: span 3; /* Hace que .top ocupe las tres columnas */
+    width: 100%; /* Asegura que .top ocupe todo el ancho de .box */
+    position: relative; /* Necesario para el posicionamiento absoluto de screen-sm */
+}
+
+.top screen-sm{
+    width: 100%; /* Asegura que screen-sm ocupe todo el ancho de .top */
+}
+
+.top .spacer{
+    width: 360px; /* Ajusta el ancho según el espacio reservado deseado */
+    height: 260px; /* Asegura que ocupe toda la altura del contenedor .top */
+    flex-shrink: 0; /* Asegura que el espacio no se reduzca */
+
+}
+
+.mid {
+    grid-column: span 3; /* Hace que .mid ocupe las tres columnas */
+    position: relative; /* Posiciona elementos absolutamente dentro de este contenedor */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos al principio y al final del contenedor */
+    align-items: center; /* Alinea los elementos al centro del contenedor verticalmente */
+}
+
+.mid .boxi {
+    position: absolute; /* Posiciona .boxi absolutamente */
+    top: 0; /* Alinea .boxi al principio del contenedor .mid */
+    left: 0; /* Alinea .boxi al lado izquierdo del contenedor .mid */
+    width: 100%; /* Hace que .boxi ocupe el ancho completo del contenedor .mid */
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos al principio y al final del contenedor */
+    align-items: center; /* Alinea los elementos al centro del contenedor verticalmente */
+}
+
+.mid .spacer1{
+    flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
+    width: 251px; /* Puedes ajustar el tamaño según sea necesario */
+    height: 77px; /* Puedes ajustar el tamaño según sea necesario */
+}
+
+.mid .spacer2{
+    flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
+    width: 338px; /* Puedes ajustar el tamaño según sea necesario */
+    height: 77px; /* Puedes ajustar el tamaño según sea necesario */
+}
+
+.mid .spacer3{
+    flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
+    width: 350px; /* Puedes ajustar el tamaño según sea necesario */
+    height: 77px; /* Puedes ajustar el tamaño según sea necesario */
+}
+
+.mid img{
+    width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    box-sizing: border-box; /* Asegura que el padding se incluya dentro de las dimensiones totales */
+}
+
+.mid screen-sm{
+    flex: 1; /* Ocupa el espacio restante en el contenedor */
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.mid .pieces{
+    position: absolute; /* Posiciona la imagen absolutamente dentro del contenedor padre */
+    top: -42px; /* Ajusta la posición superior según sea necesario */
+    left: 970px; /* Ajusta la posición izquierda según sea necesario */
+    width: 196px; /* Establece un ancho específico para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.box-m {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.middle {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-left: 6px; /* Empuja la imagen a la derecha */
+}
+
+
+.fr-mid {
+    flex: 0 0 390px;
+    max-width: 390px;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.middle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* O use 'cover' según tus necesidades */
+}
+
+screen-sm {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+}
 
 .top .more .product-info .product-dots{
     font-size: 15px;
