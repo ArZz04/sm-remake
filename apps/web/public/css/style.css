@@ -556,7 +556,7 @@ screen-sm {
 
 .mid .spacer3{
     flex: 0 0 auto; /* Permite que el spacer tenga un tamaño fijo */
-    width: 340px; /* Puedes ajustar el tamaño según sea necesario */
+    width: 325px; /* Puedes ajustar el tamaño según sea necesario */
     height: 77px; /* Puedes ajustar el tamaño según sea necesario */
 }
 
