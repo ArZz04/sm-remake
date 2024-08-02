@@ -1190,6 +1190,12 @@ video {
   color: rgb(242 146 146 / var(--tw-text-opacity));
 }
 
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(214 40 47 / var(--tw-text-opacity));
+  font-family: 'Oswald';
+}
+
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));

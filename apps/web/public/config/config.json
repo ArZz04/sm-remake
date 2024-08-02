@@ -1,0 +1,11 @@
+
+{
+    "api-url": "https://api-sm-rrzt.onrender.com",
+
+    "timeInterval": 5000,
+
+    "schendule" :{
+        "dias": "LUNES A DOMINGO",
+        "horario": "6:00 AM - 3:30 PM"
+    }
+}

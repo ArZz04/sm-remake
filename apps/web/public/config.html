@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aquí va tu descripción corta y precisa sobre el contenido de la página.">
+    <title>AJUSTES | OBRADOR SANTA MARIA</title>
+    <link href="css/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-stone-800">
+
+    <nav class="bg-stone-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-32 items-center justify-between">
+                <div class="absolute inset-y-0 left-5 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-stone-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-auto w-32" src=".//images/logo-sm.png" alt="Obrador Santa Maria">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-y-0 space-x-4">
+                            <a href="index.html"
+                                class="text-gray-300 hover:bg-stone-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">Inicio</a>
+                            <a href="prices.html"
+                                class="text-gray-300 hover:bg-stone-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">Precios</a>
+                            <a href="config.html"
+                                class="bg-stone-900 text-white rounded-md px-3 py-2 text-lg font-medium"
+                                aria-current="page">Ajustes</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-6">
+                <a href="index.html"
+                    class="text-gray-300 hover:bg-stone-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Inicio</a>
+                <a href="prices.html"
+                    class="text-gray-300 hover:bg-stone-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Precios</a>
+                <a href="config.html" class="bg-stone-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                    aria-current="page">Ajustes</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="bg-stone-900 h-48 text-2xl z-40">
+        <div class="bg-stone-900">
+            <div class="relative z-10 isolate px-6 py-24 sm:py-18 lg:px-8 w-1/2">
+                <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
+                    <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div>
+                <div class="max-w-40 text-center mx-auto">
+                    <h2 class="text-3xl tracking-tight text-white sm:text-4xl">Ajustes</h2>
+                    <p class="mt-2 text-lg leading-8 text-gray-400"> Configuraciones de la pagina web.</p>
+    
+                    <div class="flex flex-wrap justify-center gap-x-8">
+                        <div class="flex flex-col items-center m-4">
+                            <h3 class="text-gray-300 mb-4" >HORARIO</h3>
+                            <form action="" class="w-full flex flex-col">
+                                <label for="dias" class="text-sm text-gray-300 text-left">DIAS:</label>
+                                <input type="text" name="dias" id="dias" class="mb-2 text-white" placeholder="LUNES A DOMINGO" disabled>
+                                <label for="horas" class="text-sm text-gray-300 text-left">HORAS:</label>
+                                <input type="text" name="horas" id="horas" class="mb-2 text-white" placeholder="6:00AM - 3:30PM" disabled>
+                            </form>
+                            <label id="schendule-invalid" class="text-sm text-red-700 text-left hidden">VERIFIQUE LOS HORARIOS</label>
+                        </div>
+                        <div class="flex flex-col items-center m-4">
+                            <h3 class="text-gray-300 mb-4">INTERVALO</h3>
+                            <form action="" class="w-full flex flex-col">
+                                <label for="intervalo" class="text-sm text-gray-300 text-left">SEGUNDOS:</label>
+                                <input type="text" name="intervalo" id="intervalo" class="mb-2 text-white" placeholder="5 segundos" disabled>
+                            </form>
+                            <label id="interval-invalid" class="text-sm text-red-700 text-left hidden">EL INTERVALO ES INVALIDO!!</label>
+                        </div>
+                        <label id="error-message" class="text-sm text-red-700 text-left hidden"></label>
+                    </div>
+
+                    <div class="flex flex-wrap">
+                        <div class="w-full flex flex-col text-left">
+                            <div>
+                                <label class="text-sm text-gray-300">API URL : </label><label id="api-url" class="text-sm text-gray-400"></label>
+                            </div>
+                            <div>
+                                <label  class="text-sm text-gray-300">api-status : </label><label id="api-status" class="text-sm text-gray-400"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script src="./config/config.js" type="module"> </script>
+</body>
+</html>

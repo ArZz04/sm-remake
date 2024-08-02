@@ -1,8 +1,25 @@
 import { fetchDataAndUpdateCache } from './cache.js';
-const API_URL =  'https://api-sm-rrzt.onrender.com';
+import { getAPIUrlText } from '../config/config.controller.js';
+
+let API_URL = null;
+
+async function initialize() {
+    try {
+        API_URL = await getAPIUrlText();
+    } catch (error) {
+        console.error('Error getting API URL:', error);
+    }
+}
+
+async function getAPIUrl() {
+    if (API_URL === null) {
+        await initialize(); // Espera a que API_URL se inicialice
+    }
+    return API_URL;
+}
 
 export async function getProducts() {
-    const url = `${API_URL}/api/products/all`;
+    const url = `${await getAPIUrl()}/api/products/all`;
 
     return fetch(url, {
         method: 'GET',
@@ -25,7 +42,7 @@ export async function getProducts() {
 }
 
 export async function getProductsByFamilyId(familyId) {
-    const url = `${API_URL}/api/products/family/${familyId}`;
+    const url = `${await getAPIUrl()}/api/products/family/${familyId}`;
 
     return fetch(url, {
         method: 'GET',
@@ -48,7 +65,7 @@ export async function getProductsByFamilyId(familyId) {
 }
 
 export async function getProductById(productId) {
-    const url = `${API_URL}/api/products/byplu/${productId}`;
+    const url = `${await getAPIUrl()}/api/products/byplu/${productId}`;
 
     return fetch(url, {
         method: 'GET',
@@ -72,14 +89,14 @@ export async function getProductById(productId) {
 }
 
 export async function getProductsBySubfamilyId(subfamilyId) {
-    const url = `${API_URL}/api/products/subfamily/${subfamilyId}`;
+    const url = `${await getAPIUrl()}/api/products/subfamily/${subfamilyId}`;
     const cacheName = `productsSubfamily${subfamilyId}`;
 
     return fetchDataAndUpdateCache(url, cacheName);
 }
 
 export async function getFamilies() {
-    const url = `${API_URL}/api/families/all`;
+    const url = `${await getAPIUrl()}/api/families/all`;
 
     return fetch(url, {
         method: 'GET',
@@ -104,7 +121,7 @@ export async function getFamilies() {
 }
 
 export async function getLatestProducts() {
-    const url = `${API_URL}/api/products/recent`;
+    const url = `${await getAPIUrl()}/api/products/recent`;
 
     return fetch(url, {
         method: 'GET',
@@ -127,7 +144,7 @@ export async function getLatestProducts() {
 }
 
 export async function updateProductapi(productId, updatedProductData) {
-    const url = `${API_URL}/api/products/update/${productId}`;
+    const url = `${await getAPIUrl()}/api/products/update/${productId}`;
 
     try {
         const response = await fetch(url, {
@@ -149,3 +166,5 @@ export async function updateProductapi(productId, updatedProductData) {
         throw error; // Propaga el error para que se maneje donde se llame a la función
     }
 }
+
+initialize();
