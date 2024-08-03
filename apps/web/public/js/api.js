@@ -1,7 +1,6 @@
 import { fetchDataAndUpdateCache } from './cache.js';
-import { getAPIUrlText } from '../config/config.controller.js';
 
-let API_URL = null;
+let API_URL = 'https://api-sm-rrzt.onrender.com';
 
 async function initialize() {
     try {
