@@ -1,7 +1,7 @@
 import { fetchDataAndUpdateCache } from './cache.js';
 
 let API_URL = 'https://api-sm-rrzt.onrender.com';
-
+    
 async function initialize() {
     try {
         API_URL = await getAPIUrlText();
