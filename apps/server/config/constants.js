@@ -14,12 +14,13 @@ const author = {
 // MONGODB CREDENTIALS
 
 const dbName = process.env.DBNAME;
+const dbCollection = process.env.DBCOLLECTION;
 const usr = process.env.USR;
 const pwd = process.env.PASS;
 
 // MONGODB URL
 
-const MONGO_URI = `mongodb+srv://${usr}:${pwd}@${dbName}.0z7r5tf.mongodb.net/?retryWrites=true&w=majority&appName=${dbName}`;
+const MONGO_URI = `mongodb+srv://${usr}:${pwd}@${dbName}.0z7r5tf.mongodb.net/${dbCollection}?retryWrites=true&w=majority&appName=${dbName}`;
 
 
 module.exports = {
