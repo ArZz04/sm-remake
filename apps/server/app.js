@@ -9,6 +9,7 @@ const { PORT, author } = require('./config/constants');
 // ROUTES
 const productRoutes = require('./routes/productRoute');
 const familyRoutes = require('./routes/familyRoute');
+const extraRoutes = require('./routes/extraRoute');
 
 // INITIALIZES APPS
 const app = express();
@@ -40,6 +41,7 @@ app.use(cors(corsOptions));
 
 app.use('/api/products', productRoutes);
 app.use('/api/families', familyRoutes);
+app.use('/api/extra', extraRoutes);
 
 
 app.get('/', (req, res) => {
