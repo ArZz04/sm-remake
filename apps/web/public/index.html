@@ -16,8 +16,6 @@
   <nav class="bg-stone-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-32 items-center justify-between">
-        <div class="absolute inset-y-0 left-5 flex items-center sm:hidden">
-        </div>
         <div class="flex flex-1 items-center justify-center sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
             <img class="h-auto w-32" src="images/logo-sm.png" alt="Obrador Santa Maria">
@@ -28,13 +26,15 @@
                 aria-current="page">Inicio</a>
               <a href="prices.html"
                 class="text-gray-300 hover:bg-stone-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">Precios</a>
+              <a href="config.html"
+                class="text-gray-300 hover:bg-stone-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">Ajustes</a>
             </div>
           </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
         </div>
       </div>
-      </div>
+    </div>
     </div>
     </div>
 
@@ -46,6 +46,8 @@
           aria-current="page">Inicio</a>
         <a href="prices.html"
           class="text-gray-300 hover:bg-stone-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Precios</a>
+        <a href="config.html"
+          class="text-gray-300 hover:bg-stone-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Ajustes</a>
       </div>
     </div>
   </nav>
@@ -139,9 +141,10 @@
             </li>
 
           </ul>
-          
+
         </div>
-        <label  class="text-sm text-gray-300">api-status : </label><label id="api-status" class="text-sm text-gray-400"></label>
+        <label class="text-sm text-gray-300">api-status : </label><label id="api-status"
+          class="text-sm text-gray-400"></label>
       </div>
       </div>
     </footer>
