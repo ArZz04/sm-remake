@@ -20,7 +20,7 @@ const setSchedule = async (req, res) => {
 
     try {
         // Elimina cualquier horario existente
-        await Schendule.deleteMany({});
+        await Schedule.deleteMany({});
 
         // Crea y guarda el nuevo horario
         const schedule = new Schedule({ textUp, textDown });
