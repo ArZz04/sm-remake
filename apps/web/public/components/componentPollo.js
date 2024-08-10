@@ -34,7 +34,6 @@ async function loadProducts() {
 
     s1.appendChild(Screen.renderProducts(products1));
     s2.appendChild(Screen.renderProducts(products2));
-    s3.appendChild(Screen.renderProducts(products3));
 }
 
 loadProducts();
