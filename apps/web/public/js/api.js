@@ -150,3 +150,50 @@ export async function updateProductapi(productId, updatedProductData) {
         throw error; // Propaga el error para que se maneje donde se llame a la función
     }
 }
+
+export async function getSchendule() {
+    const url = `${API_URL}/api/extra/schendule`;
+
+    return fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al obtener los productos más recientes');
+        }
+        return response.json();
+    })
+    .then(data => {
+        return data;
+    })
+    .catch(error => {
+        console.error('Error al conectar con la api:', error);
+    });
+}
+
+export async function updateText(updatedTextData) {
+    const url = `${API_URL}/api/extra/schendule/`;
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedTextData)
+        });
+
+        if (!response.ok) {
+            throw new Error('Error al actualizar el texto');
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error al conectar con la API:', error);
+        throw error; // Propaga el error para que se maneje donde se llame a la función
+    }
+}
