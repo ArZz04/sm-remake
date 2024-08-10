@@ -39,7 +39,6 @@ btSave.addEventListener('click', async (event) => {
 
     try {
         const data = await updateText(updatedTextData);
-        console.log('Texto actualizado:', data);
         fetchSchedule();
     } catch (error) {
         console.error('Error al actualizar el texto:', error);
