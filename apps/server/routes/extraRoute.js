@@ -1,9 +1,9 @@
 const express = require('express');
-const { getSchendule, setSchendule } = require('../controllers/extraController');
+const { getSchedule, setSchedule } = require('../controllers/extraController');
 
 const router = express.Router();
 
-router.get('/schendule', getSchendule);
-router.post('/schendule', setSchendule);
+router.get('/schedule', getSchedule);
+router.post('/schedule', setSchedule);
 
 module.exports = router;
