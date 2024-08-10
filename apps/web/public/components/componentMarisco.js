@@ -1,4 +1,4 @@
-import { getProductsBySubfamilyId } from "../js/api.js";
+import { getProductsBySubfamilyId, getSchedule } from "../js/api.js";
 
 class Screen {
     static renderProducts(products) {
@@ -26,8 +26,14 @@ class Screen {
 async function loadProducts() {
 
     const products1 = await getProductsBySubfamilyId(18);
+    const schedule = await getSchedule();
 
     const s1 = document.getElementById('s18');
+    const tUp = document.getElementById('tUp');
+    const tDown = document.getElementById('tDown');
+
+    tUp.innerHTML = schedule[0].textUp;
+    tDown.innerHTML = schedule[0].textDown;
 
     s1.appendChild(Screen.renderProducts(products1));
 
