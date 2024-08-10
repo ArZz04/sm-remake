@@ -151,8 +151,8 @@ export async function updateProductapi(productId, updatedProductData) {
     }
 }
 
-export async function getSchendule() {
-    const url = `${API_URL}/api/extra/schendule`;
+export async function getSchedule() {
+    const url = `${API_URL}/api/extra/schedule`;
 
     return fetch(url, {
         method: 'GET',
@@ -175,7 +175,7 @@ export async function getSchendule() {
 }
 
 export async function updateText(updatedTextData) {
-    const url = `${API_URL}/api/extra/schendule/`;
+    const url = `${API_URL}/api/extra/schedule/`;
 
     try {
         const response = await fetch(url, {
